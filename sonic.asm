@@ -17,7 +17,7 @@ zeroOffsetOptimization = 0
 	include	"Variables.asm"
 	include	"Macros.asm"
 
-EnableSRAM	  = 0	; change to 1 to enable SRAM
+EnableSRAM	  = 1	; change to 1 to enable SRAM
 BackupSRAM	  = 1
 AddressSRAM	  = 3	; 0 = odd+even; 2 = even only; 3 = odd only
 
@@ -112,8 +112,8 @@ loc_E0:
 	endif
 		dc.b "SEGA MEGA DRIVE " ; Hardware system ID (Console name)
 		dc.b "(C)SEGA 1991.APR" ; Copyright holder and release date (generally year)
-		dc.b "SONIC THE               HEDGEHOG                " ; Domestic name
-		dc.b "SONIC THE               HEDGEHOG                " ; International name
+		dc.b "Sonic The Hedgehog                              " ; Domestic name
+		dc.b "Sonic The Hedgehog                              " ; International name
 		if Revision=0
 		dc.b "GM 00001009-00"   ; Serial/version number (Rev 0)
 		else
